@@ -47,7 +47,7 @@ var value =num ** 0.5
 if (Math.floor(value) === value || value ==1 || value ==0){
     console.log("It is a perfect square")
 }
-else if (marks<0) {
+else if (num<0) {
     console.log("It is a invalid input")
 }
 else {
