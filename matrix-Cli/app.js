@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import { questionInt } from "readline-sync";
-import { userMatrix,printMatrix,addMatrices,diagonalMatrix,constantMultiplication} from "./operation.js"
+import { userMatrix,printMatrix,addMatrices,diagonalMatrix,constantMultiplication, matrixMultiplication} from "./operation.js"
 
 function main(){
     console.log(chalk.green("*****************************"));
@@ -38,6 +38,11 @@ function main(){
             break;
         case 3:
             console.log("The multiplication of given matrices is : ");
+            var m1 = userMatrix()
+            var m2 = userMatrix()
+            var result = matrixMultiplication(m1,m2)
+            console.log("Result of multiplication of two matrices : ");
+            printMatrix(result)
             break;
         case 4:
             console.log("Determinant of given matrix is : ");

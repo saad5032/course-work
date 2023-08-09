@@ -70,7 +70,7 @@ function diagonalMatrix(matrix){
     return m;
 }
 
-export {printMatrix,userMatrix,addMatrices,diagonalMatrix,constantMultiplication}
+export {printMatrix,userMatrix,addMatrices,diagonalMatrix,constantMultiplication,matrixMultiplication}
 
 function constantMultiplication(matrix,constant){
     var m = new Array(matrix.length)
@@ -83,7 +83,13 @@ function constantMultiplication(matrix,constant){
     return m;
 }
 
-// function matrixMultiplication(m1 , m2){
-//     var m = new Array(m1.length)
-//     for (var i=0;i<matrix)
-// }
+function matrixMultiplication(m1 , m2){
+    var m = new Array(m1.length)
+    for (var i=0;i<m1.length;i++){
+        m[i] = new Array(m1[0].length)
+        for (var j=0;j<m[0].length;j++){
+            //m[i][j]=
+        }
+    }
+    return m;
+}

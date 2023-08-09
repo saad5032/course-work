@@ -11,7 +11,7 @@ stack-2 : 2*f(3)  -> value of function f(2) and n is now 3
 stack-3 : 2*f(4)  -> value of function f(3) and n is now 4
 stack-4 : 4       -> value of function f(4)
 
-Now,
+Now, last in first out
 stack-3 : 2*4 =8  value of f(3)
 stack-3 : 2*8 =16 value of f(2)
 stack-1 : 16,  answer
