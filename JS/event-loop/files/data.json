@@ -1,0 +1,14 @@
+[
+    {
+        "fname": "saad",
+        "lname": "syed",
+        "email": "syed@code.in",
+        "age": 25
+    },
+    {
+        "fname": "ateeq",
+        "lname": "mohd",
+        "email": "mohdateeq@gmail.com",
+        "age": 25
+    }
+]
