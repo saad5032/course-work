@@ -1,6 +1,7 @@
 import readLineSync from "readline-sync";
 import axios from "axios";
 import chalk from "chalk";
+import fs from "fs";
 
 async function Main() {
   console.log(chalk.green("*************************************************"));
@@ -43,3 +44,10 @@ let currentEpoch = Date.now()  // UTC format
 
 let currentDate = new Date(currentEpoch).toLocaleString() // If you to convert UTC to your local time
 console.log(currentDate);
+
+function cityName(){
+  fs.readFile("cities.json",(err,info)=>{
+    if (err) throw err;
+    data = JSON.parsa(info)
+  })
+}

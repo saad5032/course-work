@@ -1,0 +1,11 @@
+[
+    {
+        "username": "saad",
+        "email": "saad@gmail.com",
+        "phone": "123",
+        "adress": "asxas",
+        "password": "$2b$12$Y8twxgFec95OKiGbsISW1ufr4htFmI47UfoBYkBdErUmP2YpB3Y06",
+        "confirmPassword": "light123",
+        "todo": []
+    }
+]

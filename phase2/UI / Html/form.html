@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First Name : </label>
+        <input type="text" name="fname" id="fname" placeholder="Enter your first name" >
+        <br><br>
+
+        <label for="lname">Last Name : </label>
+        <input type="text" name="lname" id="lname" placeholder="Enter your last name" >
+        <br><br>
+
+        <label for="email">Email : </label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" >
+        <br><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id=""password placeholder="Enter your password">
+        <br><br>
+        
+        <label for="website">Website</label>
+        <input type="url" name="website" id="website" placeholder="Enter your website">
+        <br><br>
+
+        <textarea name="description" id="description" cols="10" rows="5" placeholder="Enter something"></textarea>
+        <br><br>
+
+        <p>Please select your favourite language</p>
+
+        <input type="checkbox" name="favLang" id="html" checked>
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="favLang" id="CSS">
+        <label for="CSS">CSS</label>
+
+        <input type="checkbox" name="favLang" id="JS">
+        <label for="JS">JS</label>
+        <br><br>
+
+        <label for="title">Title : </label><br>
+
+        <label for="Mr.">Mr.</label>
+        <input type="radio" name="title",id="Mr."> <br>
+
+        <label for="Mrs.">Mrs.</label>
+        <input type="radio" name="title",id="Mrs." checked> <br>
+
+        <label for="Dr.">Dr.</label>
+        <input type="radio" name="title",id="Dr."> <br>
+        <br><br>
+
+        <label for="food">Select your favourite food</label>
+        <select name="food" id="food">
+            <option value="pizza">pizza</option>
+            <option value="burger">burger</option>
+            <option value="cake">cake</option>
+        </select>
+        <br><br>
+
+        <label for="date">Enter your birthday</label>
+        <input type="date" name="date" id="date">
+        <br><br>
+
+        <input type="file" name="myfile" id="myfile" accept=".png, .jpg, .pdf">
+        <br><br>
+
+        <input type="submit" value="submit">
+    </form> 
+</body>
+</html>
