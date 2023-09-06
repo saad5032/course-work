@@ -1,11 +1,22 @@
 [
     {
-        "username": "saad",
-        "email": "saad@gmail.com",
+        "username": "syed",
+        "email": "syed@gmail.com",
         "phone": "123",
-        "adress": "asxas",
-        "password": "$2b$12$Y8twxgFec95OKiGbsISW1ufr4htFmI47UfoBYkBdErUmP2YpB3Y06",
-        "confirmPassword": "light123",
-        "todo": []
+        "adress": "hydd",
+        "password": "$2b$12$5DLh4zg/CY7arfhGspwds.UrRoO3CimEYluT4MxkexphRZCWk552O",
+        "confirmPassword": "$2b$12$VUys2SsCBf0TryI0BcA6Neox5OCXBiY0tDZoj2EsNiJtzHQFxpnfS",
+        "todo": [
+            {
+                "name": "ayesha",
+                "isCompleted": true,
+                "taskID": "sKTEE7"
+            },
+            {
+                "name": "saad",
+                "isCompleted": false,
+                "taskID": "LPcBwY"
+            }
+        ]
     }
 ]

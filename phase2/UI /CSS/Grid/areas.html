@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "nav main aside"
+            "nav footer footer";
+
+            grid-template-columns: 1fr 5fr 1fr;
+            grid-template-rows: 100px 1fr 100px;
+        }
+
+        header,nav,main,aside,footer{
+            background-color: steelblue;
+            color: white;
+            padding: 20px;
+            border: 2px solid skyblue;
+        }
+
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        nav{
+            grid-area: nav;
+        }
+        aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>content</main>
+    <nav>navigation</nav>
+    <aside>Sidebar</aside>
+    <footer>Footer</footer>
+
+</body>
+</html>

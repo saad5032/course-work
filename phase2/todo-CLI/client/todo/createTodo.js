@@ -3,6 +3,7 @@ import readLineSync, { question } from "readline-sync"
 import bcrypt from "bcrypt"
 import fs from "fs/promises"
 import randomStringGenerator from "../utils/randomStringGenerator.js";
+import axios from "axios";
 
 
 async function CreateTodo(email){
@@ -13,28 +14,26 @@ async function CreateTodo(email){
         \tCreate Todo\n 
         ====================================`);
 
-        
-
-        let fileData = await fs.readFile("data.json")
-        fileData = JSON.parse(fileData)
-
-        let userFound = fileData.find(ele => ele.email == email)
 
         let todoName = question("Enter your todo name : ")
         while(!todoName){
             todoName = question("Enter your todo name : ")
         }
 
-        let todoData = {
-            name : todoName,
-            isCompleted : false,
-            taskID : randomStringGenerator(6)
+        let todo={
+            todoName
         }
 
-        userFound.todo.push(todoData)
-
-        await fs.writeFile("data.json",JSON.stringify(fileData))
-        console.log(chalk.yellow("Todo created suceessfully"));
+    let token = await fs.readFile("secret.txt") 
+    token = token.toString()
+ 
+    let res = await axios.post("http://localhost:5001/api/todo/add",todo,{
+        headers:{
+            "auth-token":token
+        }
+    })
+    console.log(res.data.success);
+        
     }
 
     catch (err){

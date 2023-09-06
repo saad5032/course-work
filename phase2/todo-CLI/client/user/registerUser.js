@@ -69,7 +69,7 @@ async function registerUser(){
         todo : []
     }
 
-    let res = await axios.post("http://localhost:5001/api/register",userData)
+    let res = await axios.post("http://localhost:5001/api/user/register",userData)
 
     // let data = await fs.readFile("data.json")
     // data = JSON.parse(data)

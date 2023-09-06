@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 400px;
+            color: green;
+        }
+        /*
+        position relative : the h1 tag will move left and right but it will be in normal flow that is the other tag such as p tag in body wont occupt its space
+        position absolute : the h1 tags goes to top-left of the container if that container is relative and if it is not then it goes to top-left of parent container and so on till parent page
+        position fixed : if any tag say p tag positioin is fixed then even if you scroll down it will overlaps with other elements
+        positon sticky : if you scroll down and reach the tag whose position is sticky then even if you scroll down it will be there and wont overlap with other elements
+        */
+        /* h1{
+            background-color: beige;
+            padding: 10px;
+            border: 2px solid black;
+            position: relative;
+            
+        } */
+
+        .container {
+            margin-top: 100px;
+            margin-left: 50px;
+            position: relative;
+        }
+
+        .example {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .ex{
+            position: sticky;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The evolution of the internet</h1>
+    <div class="container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque ratione, tempore facere at unde maxime
+            corporis doloremque architecto, fugiat quidem ipsa explicabo libero sint ab non possimus minima iste autem,
+            perspiciatis rem quo. Deserunt vitae nihil aliquid tempore et tenetur eveniet in, totam, ab cum dolor porro
+            facere repudiandae repellendus deleniti optio dolorum voluptates ipsam aspernatur accusamus esse qui eos.
+            Harum voluptate exercitationem dolores ullam hic omnis, commodi corporis perspiciatis facere et dicta
+            expedita possimus iusto? Praesentium labore exercitationem nostrum nihil culpa tenetur quae voluptatibus
+            nemo, error mollitia fuga? Deleniti neque corrupti cumque totam ipsum in nobis necessitatibus magnam eum.
+        </p>
+        <p class="example1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores iste, ipsa amet distinctio
+            atque commodi sunt rem eaque harum ipsam debitis reprehenderit corporis voluptate magni vel enim eius
+            inventore! Doloribus?</p>
+        <h2 class="ex">Hello</h2>
+        <p class="example2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores iste, ipsa amet distinctio
+            atque commodi sunt rem eaque harum ipsam debitis reprehenderit corporis voluptate magni vel enim eius
+            inventore! Doloribus?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa autem illo neque sapiente debitis reiciendis
+            culpa, dicta animi tempore voluptatem tenetur necessitatibus ex in cupiditate quod quo veritatis odio totam?
+        </p>
+    </div>
+</body>
+
+</html>
