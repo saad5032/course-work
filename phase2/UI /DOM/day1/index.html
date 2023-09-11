@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is syed html file">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">Hello to DOM</h1>
+    <p class="a">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, nihil.</p>
+    <input type="button" value="click">
+</body>
+
+<script>
+    console.log(document.getElementsByTagName("h1"));
+    console.log(document.getElementsByClassName("a"));
+    console.log(document.getElementsByTagName("p"));
+
+    console.log(document.getElementById("hello"));
+    console.log(document.querySelector("#hello"));
+    console.log(document.querySelectorAll("p"));
+
+    let element = document.querySelector("h1")
+    element.innerHTML = element.innerHTML+ " This is changed <em>emphasis </em>"
+
+</script>
+</html>

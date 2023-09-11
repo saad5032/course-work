@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .styled{
+            background-color: blue;
+            padding: 10px;
+            width: 100px;
+            border: none;
+            font-size: 20px;
+            border-radius: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="firstChild">I am the first child</div>
+        <p id="secondChild">I am the second child</p>
+        <h3>Living barely</h3>
+        <h1 class="fourth">Hello World</h1>
+        <p class="last">I am the last child</p>
+
+        <button id="main" value="I am clicked">Click Here</button>
+    </div>
+</body>
+
+<script>
+    let last = document.querySelector(".last")
+    let firstChild = document.querySelector("#firstChild")
+    let parent = document.querySelector("#parent")
+
+    let ele = document.createElement("h1")
+    ele.innerHTML = "<i> This is in Italic </i>"
+
+    // last.append ele
+    parent.insertBefore(ele,firstChild)
+
+    document.querySelector(".fourth").remove()
+
+    let btn = document.querySelector("#main")
+    btn.classList.add("styled")
+
+    btn.addEventListener("click",(e)=>{
+        console.log(e.target.value);
+        btn.classList.toggle("styled")
+    })
+
+</script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        table {
+            border: 1px solid yellow;
+            font-size: larger;
+            text-align: center;
+        }
+
+        th,
+        tr,
+        td {
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1> My Todos </h1>
+        <button> Filter Todos</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>userID</th>
+                    <th>Title</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+
+            </tbody>
+        </table>
+    </center>
+    
+</body>
+
+<script>
+    var arr;
+    var flag = true;
+    async function main(){
+        try{
+            const res = await axios.get("https://jsonplaceholder.typicode.com/todos")
+           
+            arr = res.data
+            createTable(arr)
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+
+
+
+
+
+
+    function createTable(arr){
+        let tbody = document.getElementById("myTable");
+        tbody.replaceChildren()
+        arr.forEach((ele,i) => {
+                let row = document.createElement("tr")
+          
+                for(let j=1 ; j<=4; j++){
+                    let col = document.createElement("td")
+    
+
+                    if(j==1) col.innerText = ele.id 
+                    if(j==2) col.innerText = ele.userId
+                    if(j==3) col.innerText = ele.title
+                    if(j==4) col.innerText = ele.completed
+                    
+                    row.appendChild(col);
+                
+                }  
+                tbody.appendChild(row)
+
+        });
+
+    }
+
+    let btn = document.querySelector("button")
+    btn.addEventListener("click",()=>{
+
+        
+        const filterData = arr.filter(ele=> ele.completed==flag)
+        createTable(filterData)
+        flag=!flag; // if i click flag becomes false 
+    })
+
+    main()
+</script>
+</html>

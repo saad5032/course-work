@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+         body {
+            background-color: black;
+            color: white;
+        }
+
+        table {
+            border: 1px solid yellow;
+            font-size: larger;
+            text-align: center;
+        }
+
+        tr,
+        td {
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1> Mine Be careful </h1>
+        <button> Click to make a grid </button>
+        <table>
+            <tbody id="myTable">
+                
+            </tbody>
+        </table>
+    </center>
+    
+</body>
+<script>
+    var arr;
+    var flag = true;
+    async function main(){
+        try{
+            let btn = document.querySelector("button")
+    btn.addEventListener("click",()=>{
+        createTable()
+    })
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+
+    function createTable(){
+        let tbody = document.getElementById("myTable");
+        tbody.replaceChildren()
+        for(let i = 1; i<=10 ; i++) {
+                let row = document.createElement("tr")
+                for(let j=1 ; j<=10; j++){
+                    let col = document.createElement("td")
+                    row.appendChild(col);
+                }  
+                tbody.appendChild(row)
+        };
+
+    }
+
+   
+main()
+</script>
+</html>

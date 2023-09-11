@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Table 1</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        table {
+            border: 1px solid yellow;
+            font-size: medium;
+            text-align: center;
+        }
+
+        th,
+        tr,
+        td {
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="root">
+            <h1>Hello</h1>
+        </div>
+        <div>
+            <table>
+                <thead >
+                    <tr>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Co-Ordinate</th>
+                        <th>Phone</th>
+                        <th>Website</th>
+                        <th>Company</th>
+                        <th>Lat</th>
+                        <th>Long</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    
+                </tbody>
+            </table>
+        </div>
+    </center>
+</body>
+
+<script>
+    async function main(){
+        try{
+            const res = await axios.get("https://jsonplaceholder.typicode.com/users")
+            console.log(res);
+            let tbody = document.getElementById("myTable")
+            let arr = res.data
+            console.log(arr);
+            arr.forEach((ele,i) => {
+                let newRow = document.createElement("tr")
+                // newRow.id = i;
+                for(let j=1 ; j<=11 ; j++){
+                    let newCol = document.createElement("td")
+                    if(j==1) newCol.innerText = ele.id   // here 11 ids will be assigned in first for loop j==1
+                    if(j==2) newCol.innerText = ele.name  
+                    if(j==3) newCol.innerText = ele.username
+                    if(j==4) newCol.innerText = ele.email
+                    if(j==5) newCol.innerText = `${ele.address.street}`
+                    if(j==6) newCol.innerText = `${ele.address.geo.lat} : latitude and ${ele.address.geo.lng} : longitude`
+                    if(j==7) newCol.innerText = ele.id
+                    if(j==8) newCol.innerText = ele.id
+                    if(j==9) newCol.innerText = ele.id
+                    if(j==10) newCol.innerText = ele.id
+
+                    newRow.appendChild(newCol)
+                }
+                tbody.appendChild(newRow)
+            });
+        
+        } catch (err){
+            console.log(err);
+        }
+    }
+
+    main()
+</script>
+
+</html>
