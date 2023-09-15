@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <section class="score-card">
+            <h1>Hey <span id="fname"></span></h1>
+            <h1>Attempts : <span id="score">0</span></h1>
+        </section>
+        <table id="myTable">
+
+        </table>
+    </center>
+
+</body>
+
+<script>
+    if(!localStorage.getItem("leaderboard")){
+        localStorage.setItem("leaderboard",JSON.stringify([]))
+    }
+
+    //const leaderboard = JSON.parse(localStorage.getItem("leaderboard"))
+
+    function main(){
+        let table = document.getElementById("myTable")
+        let data = []
+            for (let i = 0 ; i<100 ; i++){
+                data.push(i)
+            }
+            data.sort((a,b)=>0.5-Math.random());
+
+        let count = 0;
+        for(let j=1; j<=10 ; j++){
+            let r = document.createElement("tr")
+            for(let k=1; k<=10 ; k++){
+                let c = document.createElement("td")
+                c.id = data[count];
+                count++
+                c.style.cursor = "pointer"
+                c.addEventListener("click", clickfun)
+                r.appendChild(c)
+            }
+            table.appendChild(r)
+        }
+        }
+        main()
+        function clickfun(e){
+            let a = e.target.id
+            console.log(a);
+            if(a==1) alert("You won the game")
+            const primes = [2,3,5,7,11,13]
+            for (let i=0;i<primes.length;i++){
+                if (a==primes[i]){
+                    setTimeout(() => {
+                        alert("You lost the game")
+                        return location.reload()
+                    }, 500);
+                }
+            }
+
+            if(+a==1){
+                score.innerText = ++(score.innerText)
+                let userData = {
+                    fname : document.getElementById("fname").innerText,
+                    attempts : score.innerText
+                }
+                alert("You won")
+            }
+
+            for(let i=a ; i<=100 ; i++){
+                if(i%a == 0){
+                    document.getElementById(i).style.backgroundColor = "yellow"
+                }
+            }
+
+            score.innerText = ++(score.innerText)
+            
+            
+
+        }
+
+
+        function doRanking(userData){
+               
+            }
+
+        
+</script>
+
+</html>
