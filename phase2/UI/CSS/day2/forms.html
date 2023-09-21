@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --Color:#b4d1e4;
+            --size:30px;
+            --w : 500px;
+            --s:10px
+
+        }
+
+        .form{
+            background-color: var(--Color);
+            font-size: var(--size);
+            padding: var(--size);
+            width: var(--w);
+        }
+        input{
+            padding: var(--s);
+            border: 2px solid black;
+            font-size: large;
+            font-weight: bolder;
+            color: black;
+        }
+
+        input[type="submit"]{
+            border-radius: 20px;
+            color: green;
+        }
+
+        #submit:hover{
+            color: white;
+            background-color: blueviolet;
+        }
+
+        input[type="text"]:focus{
+            color: green;
+            background-color: burlywood;
+        }
+        p::selection{
+            color: blue;
+            background-color: beige;
+        }
+
+        div::first-letter{
+            font-size: 50px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name"> <br> <br>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name"> <br> <br>
+            <input type="email" id="email" name="email" placeholder="Enter your email"> <br> <br>
+            <input type="submit" value="submit" id="submit">
+        </form>
+        <br><br><br>
+        <a href="">This is an anchor tag</a>
+     
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>

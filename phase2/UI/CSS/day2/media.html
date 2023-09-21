@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.example{
+            background-color: yellow;
+            padding: 10px;
+            width: 300px;
+        }
+        p{
+            color: blue;
+            transition: 2s;
+        }
+
+
+        @media screen and (max-width:600px) {
+            div.example{
+                display: none;
+            }
+            p{
+                color: aqua;
+                font-weight: 700;
+            }
+            img{
+                width: 300px;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h2>Hide elements on different screen sizes</h2>
+
+    <div class="example">Example DIV</div>
+
+    <p>
+        When the browser's width is 600px wide or less, hide the div element.
+        Resize the browser window to see the effect.
+    </p>
+
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis laboriosam ad iusto nesciunt natus, officia
+        fugiat saepe, accusamus commodi distinctio in. Magnam voluptates ex illum dicta laudantium, ducimus blanditiis
+        provident dolore velit soluta quia eligendi non rem iste quis nam dolor suscipit temporibus illo harum sunt?
+        Quas magnam vero, enim asperiores quam unde qui error, iste natus, labore vel. Vero ipsa fuga voluptatem illum
+        vitae nulla, aliquam quasi optio nobis nesciunt, reprehenderit amet assumenda, id at molestiae architecto cum
+        ducimus voluptas cupiditate ex velit laborum ullam. Nesciunt, distinctio voluptatem perferendis cupiditate sunt
+        incidunt minima temporibus enim facere est ipsa quam!</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit dolores excepturi beatae est incidunt, neque
+        nihil minima officiis corrupti reiciendis rem. Similique, laboriosam, praesentium possimus explicabo labore
+        cupiditate cum nam alias laborum enim unde temporibus ab provident, quaerat saepe consequatur dolorem ipsa
+        voluptates pariatur magni repudiandae molestias tenetur ducimus. Officia debitis culpa cumque magnam omnis
+        quidem velit corporis quas temporibus tenetur! Excepturi nemo, fugiat voluptates sit minus, quae minima unde
+        culpa recusandae illum in mollitia? Iusto voluptatum aperiam fugit eveniet consectetur sequi quo expedita quod
+        quisquam voluptatem! Ut quo eius dicta voluptate eligendi, accusantium minus dolores ea hic et obcaecati?</p>
+
+        <img src="https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=2000" alt="" class="image1" width="500px">
+</body>
+
+</html>
