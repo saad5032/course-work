@@ -1,0 +1,21 @@
+[
+    {
+        "username": "saad",
+        "email": "s@gmail.com",
+        "password": "$2b$12$3No.DNLsXWV8J6Tn6mOXhuI9ip9Xq7QehhtH7/elG4l6yw7kjQONa",
+        "phone": "1234",
+        "address": "h12",
+        "todo": [
+            {
+                "name": "cooking",
+                "isCompleted": false,
+                "taskID": "D3bfBP"
+            },
+            {
+                "name": "Tea",
+                "isCompleted": true,
+                "taskID": "hRia5v"
+            }
+        ]
+    }
+]

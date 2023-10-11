@@ -1,0 +1,13 @@
+{
+    "PORT": 5001,
+    "URL": "http://192.168.0.217:5001",
+    "DB_STRING" : "mongodb+srv://haider:MVJMdNY61IlXbsb2@haider101.wiiryma.mongodb.net/tasky",
+    "PRIVATE_KEY": "THS",
+    "EMAIL_SMTP" : {
+        "HOST" : "mail.haider101.online",
+        "AUTH" : {
+            "USER" : "kb0107@haider101.online",
+            "PASSWORD" : "-ruLE?B+Vab}"
+        }
+    }
+}
